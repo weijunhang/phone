@@ -1,0 +1,39 @@
+<!--pages/classify/classify.wxml-->
+<!-- 搜索框 -->
+<w-search/>
+
+<!-- <view class="content">
+  <view class="hander">
+    <view class="search">
+      <icon type="search" size="16"/>
+      <input placeholder="搜索商品"></input>
+    </view>
+  </view>
+</view> -->
+
+
+<!-- 分类 -->
+<view class="classify">
+
+  <scroll-view class="classify-left" scroll-y>
+    <block wx:for="{{shopdata}}" wx:key="{{index}}">
+      <view class="left-text {{choosenav ==index?'active':''}}" bindtap="currtnav" data-index="{{index}}">{{item}}</view>
+   </block>
+  </scroll-view>
+
+  <view class="classify-right">
+    <view class="right-title">今日爆款</view>
+    <view class="right-cont">
+      <block wx:for="{{tuijian[currtype]}}" wx:key="{{index}}">
+        <view class="cont-tu">
+          <image src="{{item.picInfo[0].url}}"></image>
+          <view>
+            <text>{{item.title}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+
+</view>

@@ -1,0 +1,23 @@
+/* pages/index/index-app/index-app.wxss */
+.apply{
+  width: 98%;
+  height: 300rpx;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  margin:15rpx 1%; 
+}
+.apply-item{
+  /* flex: 1; */
+  width: 25%;
+  height: 150rpx;
+}
+.apply-item image{
+  /* width: 160rpx;
+  height: 160rpx; */
+  width: 100rpx;
+  height: 100rpx;
+}
+.apply-item view{
+  font-size: 30rpx;
+}

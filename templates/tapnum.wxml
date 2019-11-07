@@ -1,0 +1,7 @@
+ <template name="tapnum">
+   <view class="tan-suan">
+    <text bindtap="handlejian" class="{{isjianku?'jianku':''}}">-</text>
+    <text class="saun-two">{{num}}</text>
+    <text bindtap="handlejia" class="{{isjiaku?'jiaku':''}}">+</text>
+  </view>
+ </template>

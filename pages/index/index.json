@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "index-top":"./index-top/index-top",
+    "index-app":"./index-app/index-app",
+    "index-guang":"./index-guang/index-guang",
+    "index-shop":"./index-shop/index-shop",
+    "w-swiper":"../../components/w-swiper/w-swiper"
+  }
+}

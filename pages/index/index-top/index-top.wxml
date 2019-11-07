@@ -1,0 +1,13 @@
+<!--pages/index/index-top/index-top.wxml-->
+<view class="top-box">
+  <view class="box-img1">
+    <image src="../../../assets/tabbar/tabbarindex.png" mode="widthFix"></image>
+  </view>
+  <view class="box-input">
+    <image src="../../../assets/common/favor.png" mode="widthFix"></image>
+    <input class="top-input" placeholder="请输入"></input>
+  </view>
+  <view class="box-img2">
+    <image src="../../../assets/tabbar/tabbarindex-active.png" mode="widthFix"></image>
+  </view>
+</view>

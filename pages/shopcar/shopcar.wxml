@@ -1,0 +1,42 @@
+<!--pages/shopcar/shopcar.wxml-->
+<view class="content">
+
+  <!-- <block wx:for="{{}}"> -->
+    <view class="shops-box">
+      <view class="shops-nullbox" bindtap="handlechoose">
+        <view class="shops-null {{ischoose?'backimg':'no-backimg'}}"></view>
+      </view>
+      <view class="shops-img">
+        <image src="http://img000.hc360.cn/m6/M08/D1/23/wKhQoVU9mTmEDWAlAAAAAJfE8Tc942.jpg"></image>
+      </view>
+      <view class="shops-con">
+        <view class="shops-text">日本洗面奶</view>
+        <view class="shops-pic">
+          <text>￥200</text>
+
+          <import src="../../templates/tapnum.wxml"/>
+          <template is="tapnum" data="{{num,isjianku,isjiaku}}"></template>
+          
+        </view>
+      </view>
+    </view>
+
+  <!-- </block> -->
+  
+
+  <!-- 底部共计 -->
+  <view class="he-box">
+    <view class="he-left" bindtap="handlequan">
+      <view class="he-null {{isquanxuan?'backimg':'no-backimg'}}"></view>
+      <text>全选</text>
+    </view>
+    <view class="he-center">
+      <text>合计：</text>
+      <text>￥ 200</text>
+    </view>
+    <view class="he-right">
+      <view>去结算</view>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,18 @@
+<!--pages/index/index-guang/index-guang.wxml-->
+ <view class="guanggao">
+    <view class="guang-text">
+      <text>今日特惠</text>
+    </view>
+    <swiper class="guang-swiper" circular>
+      <swiper-item>
+      <navigator>
+    <image src="http://img4.cache.netease.com/photo/0001/2011-03-01/6U3BQPRO00AQ0001.jpg"></image>
+    </navigator>
+    </swiper-item>
+    <swiper-item>
+    <navigator>
+    <image src="http://img4.cache.netease.com/photo/0001/2011-03-01/6U3BQPRO00AQ0001.jpg"></image>
+    </navigator>
+    </swiper-item>
+    </swiper>
+  </view>

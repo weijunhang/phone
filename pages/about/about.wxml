@@ -1,0 +1,51 @@
+<!--pages/about/about.wxml-->
+<view class="content">
+  <view class="per-box">
+    <view class="per-left">
+      <image src="http://img1.2345.com/duoteimg/qqTxImg/2013/04/22/13667686025.jpg"></image>
+    </view>
+    <view class="per-right">
+      <view class="per-text">登录</view>
+      <view class="per-text-fen">
+        <text>头条 {{dataTiao}}</text>
+        <text>关注 {{dataGuan}}</text>
+        <text>粉丝 {{dataFen}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="app">
+    <view class="app-top">
+      <text class="top-need">常用</text>
+      <view class="top-all">
+        <text>查看全部</text>
+        <image src="/assets/common/arrow-right.png"></image>
+      </view>
+    </view>
+    <view class="app-body">
+      <block wx:for="{{bodyLi}}" wx:key="{{index}}">
+        <view class="body-li">
+          <image src="{{item.url}}"></image>
+          <view>{{item.title}}</view>
+       </view>
+      </block>
+    </view>
+
+
+  </view>
+
+  <view class="api-heng">
+    <view class="heng-all">
+      <view class="heng-left">
+        <image src="/assets/common/favor.png"></image>
+      </view>
+      <view class="heng-right">
+       <text>添加到桌面</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="out">
+    <view class="out-btn">退出登录</view>
+  </view>
+</view>

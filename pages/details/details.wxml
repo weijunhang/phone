@@ -1,0 +1,100 @@
+
+<!--pages/details/details.wxml-->
+<view class="content">
+  <!-- 轮播 -->
+  <view class="swiper-box">
+    <swiper indicator-dots autoplay interval="2000" circular class="swiper-all">
+      <block wx:for="{{imgurl}}" wx:key="{{index}}">
+        <swiper-item class="item-img">
+          <image src="{{item}}" data-src="{{item}}" bindtap="previewImage"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <!-- 标题 -->
+  <view class="tit-box">
+    <view class="tit-big">这是一个大标题</view>
+    <view class="tit-pic">￥{{pic}}</view>
+  </view>
+
+  <!-- 选择购买数量 -->
+  <view class="mai" bindtap="handleTan">
+    <text>请选择购买数量</text>
+  </view>
+  <!-- 评价 -->
+  <view class="ping-box">
+    <view class="ping-text">商品评价</view>
+    <view class="ping-cont">东西还可以！</view>
+  </view>
+
+  <!-- 详情 -->
+  <view class="xiang">
+    <text>商品详情</text>
+  </view>
+
+  <!-- 详情图片 -->
+  <view class="xiangtu">
+    <block wx:for="{{xiangUrl}}" wx:key="{{index}}">
+      <image src="{{item}}"></image>
+    </block>
+  </view>
+
+  <!-- 底部悬浮框 -->
+  <view class="bottom">
+    <view class="bottom-car" bindtap="toCar">
+      <image src="/assets/common/car.png"></image>
+    </view>
+    <view class="bottom-xin" bindtap="xinActive">
+      <image src="{{isXin?xinactive:xin}}"></image>
+    </view>
+    <view class="bottom-jia" bindtap="jiaru">加入购物车</view>
+    <view class="bottom-gou" bindtap="yiMai">立即购买</view>
+  </view>
+</view>
+
+<!-- 加阴影 -->
+<view class="{{isYin?'yin':'noyin'}}">
+
+<!-- 弹出加入购物车数量 -->
+<view class="tan-all {{isTran?'startran':''}}">
+  <view class="tan-tran">
+    <view class="tan-top">
+      <view class="top-left">
+        <view class="left-img">
+          <image src="http://img000.hc360.cn/m6/M08/D1/23/wKhQoVU9mTmEDWAlAAAAAJfE8Tc942.jpg"></image>
+        </view>
+      </view>
+      <view class="top-right">
+        <view>￥500</view>
+        <view>库存{{kucun}}件</view>
+        <view>商品编码：1829867786</view>
+      </view>
+      <view class="top-icon">
+        <icon type="clear" size="30" bindtap="hideTan"></icon>
+      </view>
+    </view>
+
+
+    <view class="tan-center">
+      <view class="tan-num">购买数量</view>
+<!-- 
+      <view class="tan-suan">
+        <text bindtap="handlejian" class="{{isjianku?'jianku':''}}">-</text>
+        <text class="saun-two">{{num}}</text>
+        <text bindtap="handlejia" class="{{isjiaku?'jiaku':''}}">+</text>
+      </view>  -->
+
+      <import src="../../templates/tapnum.wxml"/>
+      <template is="tapnum" data="{{num,isjianku,isjiaku}}"></template>
+
+    </view>
+
+    <view class="tan-bottom">
+      <view class="bottom-green" bindtap="jiaru">加入购物车</view>
+      <view class="bottom-red" bindtap="yiMai">立即购买</view>
+    </view>
+  </view>
+
+</view>
+</view>

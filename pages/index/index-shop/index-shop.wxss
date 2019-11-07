@@ -1,0 +1,62 @@
+/* pages/index/index-shop/index-shop.wxss */
+
+.zhan-box{
+  width: 98%;
+  margin:0 1%;
+  height: 300rpx;
+  display: flex;
+}
+.zhan-left{
+  width: 50%;
+  height: 300rpx;
+}
+.zhan-right{
+  height: 300rpx;
+  width: 50%;
+}
+.left-text{
+  margin: 10rpx 20rpx;
+}
+.text-te{
+  font-size: 30rpx;
+  font-weight: 500;
+}
+.text-xian{
+  font-size: 20rpx;
+  color: #666;
+  margin-left: 23rpx;
+}
+.left-img{
+  width: 98%;
+  display: flex;
+}
+.left-img image{
+  width: 85%;
+  height: 160rpx;
+  border-radius: 30rpx;
+  padding: 5rpx;
+}
+.img-left{
+  flex: 1;
+  width: 48%;
+  height: 240rpx;
+  text-align: center;
+}
+.img-right{
+  flex: 1;
+  width: 48%;
+  height: 240rpx;
+  text-align: center;
+}
+.pic{
+  font-size: 20rpx;
+}
+.pic1-text1{
+  background: red;
+  padding:0 10rpx;
+  border-radius: 20rpx;
+}
+.pic2{
+  font-size: 18rpx;
+  color: #333;
+}

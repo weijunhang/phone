@@ -1,0 +1,77 @@
+<!--pages/index/index.wxml-->
+<view class="content">
+  
+<view class="header">
+  <!-- 头部搜索框 -->
+  <index-top/>
+
+  <!-- 热搜 -->
+  <view class="hot">
+    <view class="hot-tit">热搜</view>
+    <view class="hot-text">
+      <navigator>热点事件</navigator>
+      <navigator>热点事件</navigator>
+      <navigator>热点事件</navigator>
+      <navigator>热点事件</navigator>
+    </view>
+  </view>
+
+  <!-- 首页轮播图 -->
+  <w-swiper bind:navigate="onnavigate"/>
+
+  <!-- 首页应用 -->
+  <index-app />
+
+  <!-- 广告 -->
+ <index-guang/>
+
+<!-- 商品小展 --> 
+  <index-shop bind:imageload="handleimageload"/>
+
+<!-- 分类 -->
+  <view class="fen {{isFixed?'fenfixed':''}}" id="fen">
+    <block wx:for="{{fen}}" wx:key="{{index}}">
+      <view bind:tap="handlecurrent" data-index="{{index}}">
+        <text class="{{current == index?'active':''}}">{{item}}</text>
+      </view>
+    </block>
+  </view>
+  <view class="fen" wx:if="{{isFixed}}">
+    <block wx:for="{{fen}}" wx:key="{{index}}">
+      <view bind:tap="handlecurrent" data-index="{{index}}">
+        <text class="{{current == index?'active':''}}">{{item}}</text>
+      </view>
+    </block>
+  </view>
+  <!-- 商品数据 -->
+  <view class="shopdata">
+    <block wx:for="{{shop[currtype].list}}" wx:key="{{index}}">
+      <view class="shopdata-box">
+
+        <view class="shopdata-img">
+          <image src="{{item.picInfo[0].url}}" mode="widthFix"></image>
+        </view>
+        
+        <view class="shopdata-text">
+          <view><text>{{item.title}}</text></view>
+          <view><text>{{item.ptime}}</text></view>
+        </view>
+
+      </view>
+    </block> 
+  </view>
+
+  <!-- 加载更多 -->
+  <view class="loadmore" hidden="{{isHideLoadMore}}">
+    <view class="loading_img"></view>
+    <view class="loading_tips">加载更多</view>
+  </view>
+
+  <!-- 回到顶部 -->
+  <view class="backtop" bind:tap="handleTop" wx:if="{{isShow}}">
+    <image src="/assets/common/top.png"></image>
+  </view>
+
+
+</view>
+</view>

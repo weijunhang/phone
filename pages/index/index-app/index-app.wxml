@@ -1,0 +1,9 @@
+<!--pages/index/index-app/index-app.wxml-->
+<view class="apply">
+      <block wx:for="{{shop}}" wx:key="{{index}}">
+        <view class="apply-item">
+          <image src="{{item.url}}"></image>
+          <view>{{item.text}}</view>
+        </view>
+      </block>
+    </view>

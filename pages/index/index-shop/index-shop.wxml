@@ -1,0 +1,69 @@
+<!--pages/index/index-shop/index-shop.wxml-->
+<view class="zhan-box">
+    <view class="zhan-left">
+      <view class="left-text">
+        <text class="text-te">特价商品</text>
+        <text class="text-xian">先到先得抢完为止</text>
+      </view>
+      <view class="left-img">
+        <view class="img-left">
+          <image src="http://img3.cxtuku.com/00/00/80/s813bf1ddfe6.jpg"></image>
+          <view class="pic">
+            <view class="pic1">
+              <text class="pic1-text1">现在买</text>
+              <text>￥29</text>
+            </view>
+            <view class="pic2">
+              <text>原价￥78</text>
+            </view>
+          </view>
+        </view>
+        <view class="img-right">
+          <image src="http://img.smzy.com/imges/2018/1220/20181220084051448.png"></image>
+           <view class="pic">
+            <view class="pic1">
+              <text class="pic1-text1">现在买</text>
+              <text>￥200</text>
+            </view>
+            <view class="pic2">
+              <text>原价￥118</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="zhan-right">
+      <view class="left-text">
+        <text class="text-te">限时秒杀</text>
+        <text class="text-xian">先到先得抢完为止</text>
+      </view>
+      <view class="left-img">
+        <view class="img-left">
+          <image src="http://img3.cxtuku.com/00/00/80/s813bf1ddfe6.jpg"></image>
+          <view class="pic">
+            <view class="pic1">
+              <text class="pic1-text1">现在买</text>
+              <text>￥29</text>
+            </view>
+            <view class="pic2">
+              <text>原价￥78</text>
+            </view>
+          </view>
+        </view>
+        <view class="img-right">
+          <image src="http://img.smzy.com/imges/2018/1220/20181220084051448.png" bindload="handleimageload"></image>
+           <view class="pic">
+            <view class="pic1">
+              <text class="pic1-text1">现在买</text>
+              <text>￥200</text>
+            </view>
+            <view class="pic2">
+              <text>原价￥118</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
